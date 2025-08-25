@@ -1,80 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(skyblue,blue,navy);
-    font-size: 18px;
+    background-color:BLACK;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 200px 100px;
-    color: white;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 25px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-nav ul li a:hover {
-    color: #00bcd4;
-}
-
-.profile-pic {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-}
-
-section {
+.side-profile {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 320px;
+    background: #222;
     padding: 25px;
-    background-color: rgb(255, 255, 255);
-    margin: 15px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    border-radius: 16px;
+    font-size: small;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.486);
 
-section:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
-}
-
-section h2 {
-    font-size: 28px;
-}
-
-section p, section ul {
-    font-size: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 18px;
+    gap: 15px;
+    transition: all 0.3s ease;
 }
- center{
-    image size: height: 100px;
- }
+
+.side-profile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.side-profile h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+}
+
+.side-profile p {
+    font-size: 14px;
+    color:white;
+}
+
+.card {
+    background:black;
+    padding:  15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    text-align: left;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+
+.card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.card p {
+    font-size: 13px;
+    color:white;
+}
+
+main {
+  flex: 2;
+  padding: 40px;
+} 
+.navbar {
+    position: fixed;       
+       top: 30px;
+    right: 50px;           
+    background: #222;
+    padding: 15px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    z-index: 1000;         
+}
+
+.navbar ul {
+    list-style: none;      
+
+    display: flex;         
+    gap: 20px;             
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #2575fc;       
+}
